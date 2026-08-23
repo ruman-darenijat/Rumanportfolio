@@ -1,0 +1,422 @@
+/* =========================================
+   Base
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    line-height: 1.6;
+    color: #172033;
+    background: #ffffff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: #0645ad;
+}
+
+a:hover {
+    text-decoration-thickness: 2px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #ffbf47;
+    outline-offset: 3px;
+}
+
+.container {
+    width: min(1100px, 92%);
+    margin-inline: auto;
+}
+
+.narrow {
+    max-width: 800px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-alt {
+    background: #f4f7fb;
+}
+
+/* =========================================
+   Skip Link
+========================================= */
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 20px;
+    z-index: 1000;
+    padding: 12px 18px;
+    background: #111827;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.skip-link:focus {
+    top: 20px;
+}
+
+/* =========================================
+   Header
+========================================= */
+
+.site-header {
+    background: #ffffff;
+    border-bottom: 1px solid #d9dee8;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    color: #172033;
+    font-size: 1.25rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.nav-list,
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav-list a {
+    color: #172033;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.nav-list a:hover,
+.nav-list a[aria-current="page"] {
+    color: #0645ad;
+}
+
+/* =========================================
+   Typography
+========================================= */
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: clamp(2.4rem, 6vw, 4.5rem);
+    margin-bottom: 24px;
+}
+
+h2 {
+    font-size: clamp(1.8rem, 4vw, 2.7rem);
+    margin-bottom: 24px;
+}
+
+h3 {
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+}
+
+p {
+    margin-top: 0;
+}
+
+.eyebrow {
+    margin-bottom: 12px;
+    color: #0645ad;
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* =========================================
+   Hero
+========================================= */
+
+.hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    background: #eef4ff;
+}
+
+.hero-content {
+    padding: 90px 0;
+}
+
+.hero-text {
+    max-width: 700px;
+    font-size: 1.2rem;
+    margin-bottom: 32px;
+}
+
+/* =========================================
+   Buttons
+========================================= */
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.button {
+    display: inline-block;
+    padding: 13px 22px;
+    border: 2px solid #0645ad;
+    border-radius: 6px;
+    background: #0645ad;
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #04367f;
+    border-color: #04367f;
+    color: #ffffff;
+}
+
+.button-secondary {
+    background: transparent;
+    color: #0645ad;
+}
+
+.button-secondary:hover {
+    background: #0645ad;
+}
+
+/* =========================================
+   Page Header
+========================================= */
+
+.page-header {
+    padding: 80px 0;
+    background: #eef4ff;
+}
+
+.page-header p:last-child {
+    max-width: 700px;
+    font-size: 1.1rem;
+}
+
+/* =========================================
+   Cards
+========================================= */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.card,
+.project-card {
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid #d9dee8;
+    border-radius: 10px;
+}
+
+.project-card {
+    min-height: 300px;
+}
+
+.project-type {
+    color: #0645ad;
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
+    margin-top: 24px;
+    list-style: none;
+}
+
+.project-tags li {
+    padding: 5px 10px;
+    border-radius: 4px;
+    background: #e7edf8;
+    font-size: 0.85rem;
+}
+
+/* =========================================
+   Skills
+========================================= */
+
+.skill-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 30px;
+    padding-left: 20px;
+}
+
+.skill-list li {
+    padding: 8px;
+}
+
+/* =========================================
+   Contact
+========================================= */
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+}
+
+.contact-form {
+    padding: 32px;
+    background: #f4f7fb;
+    border: 1px solid #d9dee8;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #687386;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #172033;
+    font: inherit;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #0645ad;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.form-note {
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   Footer
+========================================= */
+
+.site-footer {
+    padding: 30px 0;
+    background: #111827;
+    color: #ffffff;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.footer-links a {
+    color: #ffffff;
+}
+
+/* =========================================
+   Responsive Design
+========================================= */
+
+@media (max-width: 800px) {
+
+    .header-content {
+        flex-direction: column;
+        justify-content: center;
+        padding: 18px 0;
+    }
+
+    .nav-list {
+        justify-content: center;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .skill-list {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+}
